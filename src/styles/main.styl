@@ -1,0 +1,235 @@
+@import 'nib' // CSS3 extensions for Stylus: http://visionmedia.github.io/nib/
+
+// variables!
+
+slide_width = 900px
+slide_height = 600px
+slide_background = #eaeaea
+
+slide_transition_length = .5s
+slide_transition_easing = ease
+slide_transition_rotate_y = 90deg
+// Safari bugs out on 3d transform-origins, so we have to fake it
+slide_transition_nudge_x = -100px
+
+bullet_transition_length = .3s
+bullet_transition_easing = ease
+bullet_transition_translate_x = 16px
+
+//colors
+c_bg = #404040
+c_highlight = #E56BBA
+c_default = #E2E2E2
+
+// base
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+@media print
+  *
+    -webkit-print-color-adjust: exact
+
+@page
+  size: landscape
+  margin: 0
+
+// bespoke.js layout styles
+
+article
+  transition: background slide_transition_length slide_transition_easing
+  display: none
+  background-color: c_bg
+  &.bespoke-parent
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    overflow: hidden
+    @media print
+      overflow: visible
+      position: static
+    perspective: 600px
+
+.bespoke-slide
+  transition:
+    transform slide_transition_length slide_transition_easing,
+    opacity slide_transition_length slide_transition_easing,
+    background slide_transition_length slide_transition_easing
+  transform-origin: 50% 50% 0
+  backface-visibility: hidden
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  text-align: center
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 40px
+  border-radius: 0
+  font-family: 'Homenaje', sans-serif
+  @media print
+    zoom: 1 !important // disable bespoke-scale
+    height: 743px // seems to correspond with an A4, landscape page height
+    width: 100%
+    page-break-before: always
+    position: static
+    margin: 0
+
+  &.problem
+    background-color: c_highlight
+    h2
+      color: c_bg
+    h3
+      color: #EEEEEE
+  
+.bespoke-before-1
+  transform: translateX(-100%)
+
+.bespoke-after-1
+  transform: translateX(100%)
+  &.problem
+    transform: translateX(0%) translateY(-100%)
+    
+  @media print
+    transform: none
+
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+  @media print
+    opacity 1
+
+.bespoke-active
+  &.problem
+    transform: translateY(0%)
+  &.solution
+    transform: translateX(0%)
+
+// bespoke-bullet styles
+
+.bespoke-bullet
+  transition: all bullet_transition_length bullet_transition_easing
+
+.bespoke-bullet-inactive
+  opacity: 0
+  li&
+    transform: translateX(bullet_transition_translate_x)
+  @media print
+    opacity: 1
+
+.bespoke-bullet-active
+  opacity: 1
+
+// bespoke-scale styles
+
+.bespoke-scale-parent
+  perspective: 600px
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  @media print
+    transform: none !important
+
+// bespoke-progress styles
+
+.bespoke-progress-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 8px
+  @media only screen and (min-width: 1366px)
+    height: 8px
+  @media print
+    display: none
+
+.bespoke-progress-bar
+  transition: width .6s ease
+  position: absolute
+  height: 100%
+  background: c_highlight
+
+// prism styles
+
+pre
+  padding: 26px !important
+  border-radius: 8px
+
+.bespoke-parent
+  .token
+    &.function
+      color: c_highlight
+    &.keyword
+      color: #77CDF5
+    &.attr-name
+      color: c_highlight
+    &.tag
+      color: #77CDF5
+
+// content styles
+
+body
+  font-family: helvetica, arial, sans-serif
+  font-size: 35px
+
+h1
+  font-size: 2em
+  line-height: 82px
+  letter-spacing: -2px
+  margin-bottom: 16px
+  color: c_highlight
+
+h2
+  font-size: 3rem
+  letter-spacing: -1px
+  margin-bottom: 15px
+  color: c_highlight
+
+h3
+  font-size: 1.5rem
+  font-weight: normal
+  margin-bottom: 10px
+  color: c_default
+
+hr
+  visibility: hidden
+  height: 20px
+
+ul
+  list-style: none
+
+li
+  margin-bottom: 12px
+
+p
+  margin: 0 100px 12px
+  line-height: 22px
+
+a
+  color: c_default
+  text-decoration: none
+  &:hover
+    color: white
+
+.avatar
+  width: 180px
+  height: 180px
+  margin: 10px
+  border-radius: 90px
+  -webkit-border-radius: 90px
+  -moz-border-radius: 90px
+  background: url(../images/me.png) 0 0 no-repeat
+  background-size: cover
+
+.ridiculous
+  max-height: 400px
