@@ -251,6 +251,7 @@ pre {
   padding: 26px !important;
   -webkit-border-radius: 8px;
   border-radius: 8px;
+  font-size: 0.6em;
 }
 .bespoke-parent .token.function {
   color: #e56bba;
@@ -266,7 +267,7 @@ pre {
 }
 body {
   font-family: helvetica, arial, sans-serif;
-  font-size: 35px;
+  font-size: 45px;
 }
 h1 {
   font-size: 2em;
@@ -276,13 +277,13 @@ h1 {
   color: #e56bba;
 }
 h2 {
-  font-size: 3rem;
+  font-size: 1.5em;
   letter-spacing: -1px;
   margin-bottom: 15px;
   color: #e56bba;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 0.7em;
   font-weight: normal;
   margin-bottom: 10px;
   color: #e2e2e2;
