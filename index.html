@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Beyond the boilerplate</title>
+    <link rel="stylesheet" href="styles/styles.css"/>
+  </head>
+  <body>
+    <article>
+      <section>
+        <h1>Beyond the boilerplate</h1>
+      </section>
+      <section class="problem">
+        <h2>caution: 
+          <div>the following contains angular</div>
+        </h2>
+      </section>
+      <section>
+        <h2>we are building applications</h2>
+      </section>
+      <section>
+        <h2>there are tools to help</h2>
+      </section>
+      <section class="solution">
+        <h2 class="bullet">javascript frameworks</h2>
+        <h3 class="bullet">help give structure</h3>
+        <h3 class="bullet">bring sanity to a complex solution</h3>
+      </section>
+      <section class="problem">
+        <h2 class="bullet">combine multiple frameworks/tools</h2>
+        <h3 class="bullet">app, testing, assertions, linting, etc</h3>
+      </section>
+      <section>
+        <h2>there's a tool for that</h2>
+      </section>
+      <section class="solution">
+        <h2 class="bullet">gulp or grunt</h2>
+        <h3 class="bullet">create custom tasks/builds</h3>
+        <h3 class="bullet">makes defining your workflow easier</h3>
+      </section>
+      <section class="problem">
+        <h2 class="bullet">configuring a build takes time</h2>
+        <h3 class="bullet">can be repetitive from project to project</h3>
+      </section>
+      <section>
+        <h2>there's a tool for that</h2>
+      </section>
+      <section class="solution">
+        <h2 class="bullet">yeoman</h2>
+        <h3 class="bullet">scaffolds the boilerplate</h3>
+        <h3 class="bullet">get you coding faster</h3>
+      </section>
+      <section class="problem">
+        <h2>what about structuring your app?</h2>
+        <h3>there's no tool for that</h3>
+      </section>
+      <section>
+        <h2>boilerplate is not YOUR app</h2>
+      </section>
+      <section>
+        <h2>not uncommon to see this</h2>
+        <pre><code class="language-javascript">angular.module('myApp')
+       .service('Every', function() {})
+       .service('Service', function() {})
+       .service('And', function() {})
+       .controller('Controller', function() {})
+       .controller('Ever', function() {})
+       .directive('written', function() {});
+       </code></pre>
+      </section>
+      <section>
+        <h2>or a more real world example:</h2>
+        <pre class="ridiculous"><code class="language-javascript">angular.module('myApp')
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {})
+       .service('UserService', function() {})
+       .service('ActivitiesService', function() {})
+       .service('MessagesService', function() {})
+       .service('NotificationsService', function() {})
+       .service('ErrorService', function() {})
+       .service('ErrorInterceptor', function() {})
+       .service('AuthInterceptor', function() {})
+       .service('TrackingInterceptor', function() {})
+       .controller('UserEditController', function() {})
+       .controller('UserAddController', function() {})
+       .controller('UserSearchController', function() {})
+       .controller('ActivitiesListController', function() {})
+       .controller('ActivitiesSearchController', function() {})
+       .controller('MessageListController', function() {})
+       .controller('MessageCreateController', function() {})
+       .controller('ErrorController', function() {})
+       .controller('NotificationsController', function() {})
+       .directive('userProfile', function() {})
+       .directive('userCard', function() {})
+       .directive('userSummary', function() {})
+       .directive('activitiesSummary', function() {})
+       .directive('activitiesDetail', function() {})
+       .directive('activitiesList', function() {})
+       .directive('notificationBar', function() {})
+       .directive('errorList', function() {})
+       .directive('sideNav', function() {})
+       .directive('footerNav', function() {})
+       .directive('topNav', function() {});
+       </code></pre>
+      </section>
+      <section>
+        <h2>and your directory structure?</h2>
+        <pre class="ridiculous"><code class="language-javascript">/myApp
+    /controllers
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+        UserEditController.js
+        UserAddController.js
+        UserSearchController.js
+        ActivitiesListController.js
+        ActivitiesSearchController.js
+        MessageListController.js
+        MessageCreateController.js
+        ErrorController.js
+        NotificationsController.js
+    /services
+        UserService.js
+        ActivitiesService.js
+        MessagesService.js
+        NotificationsService.js
+        ErrorService.js
+        ErrorInterceptor.js
+        AuthInterceptor.js
+        TrackingInterceptor.js
+        UserService.js
+        ActivitiesService.js
+        MessagesService.js
+        NotificationsService.js
+        ErrorService.js
+        ErrorInterceptor.js
+        AuthInterceptor.js
+        TrackingInterceptor.js
+        UserService.js
+        ActivitiesService.js
+        MessagesService.js
+        NotificationsService.js
+        ErrorService.js
+        ErrorInterceptor.js
+        AuthInterceptor.js
+        TrackingInterceptor.js
+        UserService.js
+        ActivitiesService.js
+        MessagesService.js
+        NotificationsService.js
+        ErrorService.js
+        ErrorInterceptor.js
+        AuthInterceptor.js
+        TrackingInterceptor.js
+        UserService.js
+        ActivitiesService.js
+        MessagesService.js
+        NotificationsService.js
+        ErrorService.js
+        ErrorInterceptor.js
+        AuthInterceptor.js
+        TrackingInterceptor.js
+        UserService.js
+        ActivitiesService.js
+        MessagesService.js
+        NotificationsService.js
+        ErrorService.js
+        ErrorInterceptor.js
+        AuthInterceptor.js
+        TrackingInterceptor.js
+    /directives
+        userProfile.js
+        userCard.js
+        userSummary.js
+        activitiesSummary.js
+        activitiesDetail.js
+        activitiesList.js
+        notificationBar.js
+        errorList.js
+        sideNav.js
+        footerNav.js
+        topNav.js
+        userProfile.js
+        userCard.js
+        userSummary.js
+        activitiesSummary.js
+        activitiesDetail.js
+        activitiesList.js
+        notificationBar.js
+        errorList.js
+        sideNav.js
+        footerNav.js
+        topNav.js
+        userProfile.js
+        userCard.js
+        userSummary.js
+        activitiesSummary.js
+        activitiesDetail.js
+        activitiesList.js
+        notificationBar.js
+        errorList.js
+        sideNav.js
+        footerNav.js
+        topNav.js
+        userProfile.js
+        userCard.js
+        userSummary.js
+        activitiesSummary.js
+        activitiesDetail.js
+        activitiesList.js
+        notificationBar.js
+        errorList.js
+        sideNav.js
+        footerNav.js
+        topNav.js
+        userProfile.js
+        userCard.js
+        userSummary.js
+        activitiesSummary.js
+        activitiesDetail.js
+        activitiesList.js
+        notificationBar.js
+        errorList.js
+        sideNav.js
+        footerNav.js
+        topNav.js
+        userProfile.js
+        userCard.js
+        userSummary.js
+        activitiesSummary.js
+        activitiesDetail.js
+        activitiesList.js
+        notificationBar.js
+        errorList.js
+        sideNav.js
+        footerNav.js
+        topNav.js
+        userProfile.js
+        userCard.js
+        userSummary.js
+        activitiesSummary.js
+        activitiesDetail.js
+        activitiesList.js
+        notificationBar.js
+        errorList.js
+        sideNav.js
+        footerNav.js
+        topNav.js
+        userProfile.js
+        userCard.js
+        userSummary.js
+        activitiesSummary.js
+        activitiesDetail.js
+        activitiesList.js
+        notificationBar.js
+        errorList.js
+        sideNav.js
+        footerNav.js
+        topNav.js
+    app.js
+    </code></pre>
+      </section>
+      <section class="problem">
+        <h2 class="bullet">how can you maintain that?</h2>
+        <h2 class="bullet">what about unit testing?</h2>
+        <h2 class="bullet">how about sharing that code?</h2>
+      </section>
+      <section>
+        <h2>your framework's modularity just died</h2>
+        <h3>along with your apps maintainability</h3>
+      </section>
+      <section>
+        <h2>we can fix this</h2>
+        <h3>find your app's key domain concepts</h3>
+      </section>
+      <section>
+        <h3 class="bullet">example:</h3>
+        <h2 class="bullet">User</h2>
+        <h2 class="bullet">Activities</h2>
+        <h2 class="bullet">Messages</h2>
+      </section>
+      <section>
+        <h2>create directories for YOUR app</h2>
+        <pre><code class="language-javascript">/myApp
+    /user
+        ...
+    /activities
+        ...
+    /messages
+        ...
+    ...
+    </code></pre>
+      </section>
+      <section>
+        <h2>setup modules and dependencies</h2>
+        <pre><code class="language-javascript">angular.module('myApp', [
+    'user',
+    'activities',
+    'messages'
+]);
+</code></pre>
+      </section>
+      <section>
+        <h2>re-organise your components</h2>
+        <pre><code class="language-javascript">angular.module('user', [])
+       .service('UserService', function() {})
+       .controller('UserEditCtrl', function() {})
+       .directive('userCard', function() {})
+       </code></pre>
+      </section>
+      <section class="problem">
+        <h2>activities module needs user data?</h2>
+      </section>
+      <section>
+        <h2>pull out common functionality</h2>
+        <pre><code class="language-javascript">angular.module('user', ['user.services'])
+       .controller('UserEditCtrl', function() {})
+       .directive('userCard', function() {})
+       </code></pre>
+      </section>
+      <section>
+        <h2>this guy is now re-usable</h2>
+        <pre><code class="language-javascript">angular.module('activities', ['user.services'])
+</code></pre>
+      </section>
+      <section class="problem">
+        <h2>maybe even open source?</h2>
+      </section>
+      <section>
+        <h2>simple folder structure</h2>
+        <pre><code class="language-javascript">/myApp
+    /user
+        /controllers
+            userEditCtrl.js
+        /directives
+            userCard.js
+        user.js
+        </code></pre>
+      </section>
+      <section>
+        <h2>or flatten it out?</h2>
+        <pre><code class="language-javascript">/myApp
+    /user
+        user.module.js
+        userCard.directive.js
+        userEdit.ctrl.js
+        </code></pre>
+      </section>
+      <section class="problem">
+        <h2>don't stop at your javascript</h2>
+        <h3>split up your other assets too!</h3>
+      </section>
+      <section>
+        <h2>structure your code for devs</h2>
+        <pre><code class="language-javascript">/myApp
+    /user
+        user.module.js
+        userCard.directive.js
+        userCard.view.html
+        userCard.less
+        userDefaultAvatar.png
+        userEdit.ctrl.js
+        </code></pre>
+      </section>
+      <section>
+        <h2>shape your code for efficient development</h2>
+        <h3>leave optimizations for build tools</h3>
+      </section>
+      <section>
+        <h2>testability</h2>
+        <h3>less stubbing, efficient, higher coverage</h3>
+        <pre><code class="language-javascript">beforeEach(module('user'))
+</code></pre>
+      </section>
+      <section>
+        <h2>maintainability</h2>
+        <h3 class="bullet">when there's a bug in activities...</h3>
+        <pre class="bullet"><code class="language-javascript">/myApp
+    /activities
+        activities.module.js
+        activityItem.directive.js
+        activityItem.view.html
+        activityItem.less
+        activitiesList.ctrl.js
+        </code></pre>
+      </section>
+      <section>
+        <h2 class="bullet">delete-ability!</h2>
+        <h3 class="bullet">no rogue css rules</h3>
+        <h3 class="bullet">no image assets left behind</h3>
+      </section>
+      <section>
+        <h2 class="bullet">modularity is awesome!</h2>
+        <h3 class="bullet">its what frameworks do well</h3>
+        <h3 class="bullet">its what boilerplate can't</h3>
+      </section>
+      <section>
+        <h2 class="bullet">be kind to your fellow devs... <div class="bullet">and yourselves</div></h2>
+      </section>
+      <section>
+        <h2>thank you</h2>
+        <div class="avatar"></div>
+        <h3><a href="http://bit.ly/1gw61de">@michaeltaranto</a></h3>
+        <h3><a href="http://bit.ly/beyondtheboilerplate">bit.ly/beyondtheboilerplate</a></h3>
+      </section>
+    </article>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
