@@ -1,16 +1,8 @@
 @import 'nib' // CSS3 extensions for Stylus: http://visionmedia.github.io/nib/
 
 // variables!
-
-slide_width = 900px
-slide_height = 600px
-slide_background = #eaeaea
-
 slide_transition_length = .5s
 slide_transition_easing = ease
-slide_transition_rotate_y = 90deg
-// Safari bugs out on 3d transform-origins, so we have to fake it
-slide_transition_nudge_x = -100px
 
 bullet_transition_length = .3s
 bullet_transition_easing = ease
@@ -164,6 +156,7 @@ article
 pre
   padding: 26px !important
   border-radius: 8px
+  font-size: 0.6em
 
 .bespoke-parent
   .token
@@ -180,7 +173,7 @@ pre
 
 body
   font-family: helvetica, arial, sans-serif
-  font-size: 35px
+  font-size: 45px
 
 h1
   font-size: 2em
@@ -190,13 +183,13 @@ h1
   color: c_highlight
 
 h2
-  font-size: 3rem
+  font-size: 1.5em
   letter-spacing: -1px
   margin-bottom: 15px
   color: c_highlight
 
 h3
-  font-size: 1.5rem
+  font-size: 0.7em
   font-weight: normal
   margin-bottom: 10px
   color: c_default
