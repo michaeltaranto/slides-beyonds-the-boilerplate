@@ -152,7 +152,6 @@ article
   background: c_highlight
 
 // prism styles
-
 pre
   padding: 26px !important
   border-radius: 8px
@@ -181,18 +180,21 @@ h1
   letter-spacing: -2px
   margin-bottom: 16px
   color: c_highlight
+  z-index: 1
 
 h2
   font-size: 1.5em
   letter-spacing: -1px
   margin-bottom: 15px
   color: c_highlight
+  z-index: 1
 
 h3
   font-size: 0.7em
   font-weight: normal
   margin-bottom: 10px
   color: c_default
+  z-index: 1
 
 hr
   visibility: hidden
@@ -226,3 +228,77 @@ a
 
 .ridiculous
   max-height: 400px
+
+.gif
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  background-repeat: no-repeat
+
+  // h1, h2, h3
+  //   padding: 0.4rem 0.8em
+  //   color: #fff
+  //   background-color: rgba(192, 79, 152, 0.65)
+
+  &.beyond
+    background-size: 100%
+    background-position: 0% -90px
+    background-image: url(../images/beyond.gif)
+
+  &.tools
+    background-size: 130%
+    background-position: 0 0
+    background-image: url(../images/tools.gif)
+
+  &.caution
+    background-size: 130%
+    background-position: -200px 0
+    background-image: url(../images/caution.gif)
+
+  &.demolish
+    background-size: 130%
+    background-position: -340px 0
+    background-image: url(../images/demolish.gif)
+
+  &.huh
+    background-size: 130%
+    background-position: -260px 0
+    background-image: url(../images/huh.gif)
+
+  &.agree
+    background-size: 130%
+    background-position: -260px -50px
+    background-image: url(../images/agree.gif)
+
+  &.flatten
+    background-size: 150%;
+    background-position: -350px -160px;
+    background-image: url(../images/flatten.gif)
+
+  &.cables
+    background-size: 100%;
+    background-position: 0 -180px;
+    background-image: url(../images/cables.jpeg)
+
+  &.questions
+    background-size: 130%;
+    background-position: -200px 0;
+    background-image: url(../images/questions.gif)
+
+  &.efficient
+    background-size: 130%;
+    background-position: -100px -50px;
+    background-image: url(../images/efficient.gif)
+
+  &.delete
+    background-size: 150%;
+    background-position: -140px -230px;
+    background-image: url(../images/delete.gif)
+
+  &.surprise
+    background-size: 110%;
+    background-position: -140px 0px;
+    background-image: url(../images/surprise.gif)
