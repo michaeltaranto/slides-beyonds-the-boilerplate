@@ -275,18 +275,21 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 16px;
   color: #e56bba;
+  z-index: 1;
 }
 h2 {
   font-size: 1.5em;
   letter-spacing: -1px;
   margin-bottom: 15px;
   color: #e56bba;
+  z-index: 1;
 }
 h3 {
   font-size: 0.7em;
   font-weight: normal;
   margin-bottom: 10px;
   color: #e2e2e2;
+  z-index: 1;
 }
 hr {
   visibility: hidden;
@@ -324,4 +327,99 @@ a:hover {
 }
 .ridiculous {
   max-height: 400px;
+}
+.gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+  background-repeat: no-repeat;
+}
+.gif.beyond {
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  background-position: 0% -90px;
+  background-image: url("../images/beyond.gif");
+}
+.gif.tools {
+  -webkit-background-size: 130%;
+  -moz-background-size: 130%;
+  background-size: 130%;
+  background-position: 0 0;
+  background-image: url("../images/tools.gif");
+}
+.gif.caution {
+  -webkit-background-size: 130%;
+  -moz-background-size: 130%;
+  background-size: 130%;
+  background-position: -200px 0;
+  background-image: url("../images/caution.gif");
+}
+.gif.demolish {
+  -webkit-background-size: 130%;
+  -moz-background-size: 130%;
+  background-size: 130%;
+  background-position: -340px 0;
+  background-image: url("../images/demolish.gif");
+}
+.gif.huh {
+  -webkit-background-size: 130%;
+  -moz-background-size: 130%;
+  background-size: 130%;
+  background-position: -260px 0;
+  background-image: url("../images/huh.gif");
+}
+.gif.agree {
+  -webkit-background-size: 130%;
+  -moz-background-size: 130%;
+  background-size: 130%;
+  background-position: -260px -50px;
+  background-image: url("../images/agree.gif");
+}
+.gif.flatten {
+  -webkit-background-size: 150%;
+  -moz-background-size: 150%;
+  background-size: 150%;
+  background-position: -350px -160px;
+  background-image: url("../images/flatten.gif");
+}
+.gif.cables {
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
+  background-position: 0 -180px;
+  background-image: url("../images/cables.jpeg");
+}
+.gif.questions {
+  -webkit-background-size: 130%;
+  -moz-background-size: 130%;
+  background-size: 130%;
+  background-position: -200px 0;
+  background-image: url("../images/questions.gif");
+}
+.gif.efficient {
+  -webkit-background-size: 130%;
+  -moz-background-size: 130%;
+  background-size: 130%;
+  background-position: -100px -50px;
+  background-image: url("../images/efficient.gif");
+}
+.gif.delete {
+  -webkit-background-size: 150%;
+  -moz-background-size: 150%;
+  background-size: 150%;
+  background-position: -140px -230px;
+  background-image: url("../images/delete.gif");
+}
+.gif.surprise {
+  -webkit-background-size: 110%;
+  -moz-background-size: 110%;
+  background-size: 110%;
+  background-position: -140px 0px;
+  background-image: url("../images/surprise.gif");
 }
